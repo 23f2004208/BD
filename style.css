@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #8D6E63 0%, #6D4C41 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ body {
     height: 0;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-bottom: 100px solid #f4f4f4;
+    border-bottom: 100px solid #EFEBE9;
     z-index: 2;
 }
 
@@ -51,7 +51,7 @@ body {
     height: 0;
     border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-top: 100px solid #e8e8e8;
+    border-top: 100px solid #D7CCC8;
     z-index: 3;
     transform-origin: top center;
     transition: transform 0.6s ease;
@@ -68,7 +68,7 @@ body {
     left: 30px;
     width: 240px;
     height: 320px;
-    background: #fff;
+    background: #EDE0D0;
     border-radius: 5px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     padding: 30px 25px;
@@ -88,14 +88,14 @@ body {
 }
 
 .letter-content h1 {
-    color: #764ba2;
+    color: #6D4C41;
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .letter-content p {
-    color: #333;
+    color: #3E2723;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -105,7 +105,7 @@ body {
 .letter-content .closing {
     margin-top: 25px;
     font-style: italic;
-    color: #667eea;
+    color: #8D6E63;
     font-weight: bold;
 }
 

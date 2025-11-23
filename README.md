@@ -4,6 +4,10 @@
 
 An interactive birthday greeting card with an envelope animation featuring a warm brown color palette.
 
+🌐 **[View Live Site](https://23f2004208.github.io/BD/)**
+
+The site is automatically deployed to GitHub Pages when changes are merged to the main branch.
+
 ## Color Palette
 
 This project uses a cohesive brown-themed color scheme:

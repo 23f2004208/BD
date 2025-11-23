@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.envelope-wrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid #f4f4f4;
+    z-index: 2;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #e8e8e8;
+    z-index: 3;
+    transform-origin: top center;
+    transition: transform 0.6s ease;
+}
+
+.envelope-wrapper.opened .flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.letter {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 240px;
+    height: 320px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px 25px;
+    z-index: 1;
+    transition: transform 0.8s ease, top 0.8s ease;
+    overflow: hidden;
+}
+
+.envelope-wrapper.opened .letter {
+    transform: translateY(-180px);
+    top: -100px;
+    z-index: 4;
+}
+
+.letter-content {
+    text-align: center;
+}
+
+.letter-content h1 {
+    color: #764ba2;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.letter-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.letter-content .closing {
+    margin-top: 25px;
+    font-style: italic;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Add some stars to the background */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+body::before {
+    content: '✨';
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    font-size: 30px;
+    animation: twinkle 2s infinite;
+}
+
+body::after {
+    content: '⭐';
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    font-size: 25px;
+    animation: twinkle 3s infinite;
+}
